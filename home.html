@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main>
+        <section class="flex justify-center">
+            <div class="mockup-phone">
+                <div class="camera"></div>
+                <div class="display">
+                  <div class="artboard artboard-demo phone-3">
+                    <!-- Mobile Screen Display Start -->
+                     <!-- Stats Start -->
+                     <div class="stats shadow">
+                        <div class="stat">
+                          <div class="stat-title">Available Balance</div>
+                          <div id="account-balance" class="stat-value">89400</div>
+                        </div>
+                      </div>
+                     <!-- Stats End-->
+                      <div class="divider"></div>
+                      <!-- Button Functions Start -->
+                      <div>
+                        <button id="show-add-money" class="btn btn-warning">Add Money</button>
+                        <button id="show-withdraw" class="btn btn-error">Withdraw</button>
+                        <button id="show-transactions" class="btn btn-success">Transaction History</button>
+                      </div>
+                      <div class="divider"></div>
+                      <!-- Button Functions End -->
+                     <!-- Add Money Form Start  -->
+                    <div id="add-money-section" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Amount:</span>
+                            </label>
+                            <input  id="add-money-input" type="text" placeholder="Enter Amount" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">PIN:</span>
+                            </label>
+                            <input id="input-pin" type="password" placeholder="Enter PIN" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="btn-add-money" class="btn btn-primary">Add Money</button>
+                          </div>
+                        </form>
+                      </div>
+                      <!-- Add Money Form END -->
+
+                      <!-- Withdraw Money Start -->
+                      <div id="withdraw-money-section" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Amount:</span>
+                            </label>
+                            <input  id="withdraw-money-input" type="text" placeholder="Enter Amount" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">PIN:</span>
+                            </label>
+                            <input id="input-withdraw-pin" type="password" placeholder="Enter PIN" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="btn-withdraw-money" class="btn btn-primary">Withdraw Money</button>
+                          </div>
+                        </form>
+                      </div>
+                      <!-- Withdraw Money End -->
+                       <!-- Transaction History Start -->
+
+                       <div id="transactions-section" class="hidden">
+                        <h2 class="text-3xl">Transactions History</h2>
+                        <div class="divider"></div>
+                        <div id="transaction-list" class="space-y-2">
+
+                        </div>
+                       </div>
+                       <!-- Transaction History END -->
+                    <!-- Mobile Screen Display End-->
+                  </div>
+                </div>
+              </div>
+        </section>
+
+    </main>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/addMoney.js"></script>
+    <script src="./js/withdrawMoney.js"></script>
+    <script src="./js/features.js"></script>
+</body>
+</html>
